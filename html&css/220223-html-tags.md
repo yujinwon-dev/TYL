@@ -1,6 +1,39 @@
-[toc]
+### 목차
 
-# HTML은 재밌다 tags 정리
+- [HTML tags](#html-tags)
+  * [1.](#1)
+    + [HTML이 왜 중요한가요?](#html--)
+    + [HTML을 시맨틱하게 작성해야 하는 이유](#html----)
+  * [2.](#2)
+    + [제목과 문단 Headings and Paragraph](#--headings-and-paragraph)
+    + [강조 Emphasis](#-emphasis)
+    + [링크 Anchor](#-anchor)
+    + [이미지 Image](#-image)
+    + [목록 List](#-list)
+    + [정의 목록 Description List](#--description-list)
+    + [인용 Quotations](#-quotations)
+    + [흑마법 Div & Span](#-div--span)
+    + [Form(1) - Form](#form1---form)
+    + [Form(2) - Input](#form2---input)
+    + [Form(3) - Label](#form3---label)
+    + [Form(4) - Radio & Checkbox](#form4---radio--checkbox)
+    + [Form(5) - Select & Option](#form5---select--option)
+    + [Form(6) - Textarea](#form6---textarea)
+    + [Form(7) - Buttons](#form7---buttons)
+    + [표 Table(1) - 기본 구조](#-table1----)
+    + [표 Table(2) - 심화](#-table2---)
+    + [미디어 파일 Media](#--media)
+      - [Audio](#audio)
+      - [Video](#video)
+      - [iframe](#iframe)
+    + [기타 Etc](#-etc)
+    + [Doctype & Document Structure](#doctype--document-structure)
+    + [Title, Link, Style & Script](#title-link-style--script)
+    + [메타 데이터 Meta](#--meta)
+
+<br/>
+
+# HTML tags
 
 ## 1.
 
