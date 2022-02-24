@@ -4,7 +4,7 @@
 
 - 1:N과 N:M
 
-  ![DB_ Model Relationship-2](1020-manytomany.assets/DB_ Model Relationship-2.jpg)
+  ![DB_ Model Relationship-2](211020-manytomany.assets/DB_ Model Relationship-2.jpg)
 
 ## Intro
 
@@ -26,7 +26,7 @@ for reservation in doctor1.reservation_set.all(): print(reservation.patient.name
 
   => `앱이름_모델이름_필드명`으로 테이블 만들어짐. 중개 테이블 Reservation과 같은 형태!
 
-![image-20211020093656500](1020-manytomany.assets/image-20211020093656500.png)
+![image-20211020093656500](211020-manytomany.assets/image-20211020093656500.png)
 
 - 인스턴스 이용해서 추가/삭제
 
@@ -178,9 +178,9 @@ for reservation in doctor1.reservation_set.all(): print(reservation.patient.name
     - `article.like_users` - M:N, 참조
     - `user.like_articles` - M:N, 역참조
 
-  ![image-20211021092158181](1020-manytomany.assets/image-20211021092158181.png)
+  ![image-20211021092158181](211020-manytomany.assets/image-20211021092158181.png)
 
-  ![image-20211021092658087](1020-manytomany.assets/image-20211021092658087.png)
+  ![image-20211021092658087](211020-manytomany.assets/image-20211021092658087.png)
 
   - articles_article엔 ManyToManyField 관련 내용 없음
   - 중개 테이블(`articles_article_like_users`)에서 따로 관리

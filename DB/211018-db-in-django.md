@@ -28,7 +28,7 @@
 
   - 참조하는 테이블에서 1개의 키에 해당 -> 참조되는 테이블의 unique한 키 (꼭 기본키가 아니어도 됨) -> 참조 무결성
 
-    ![](1018-db-in-django.assets/image-20211020223846812.png)
+    ![](211018-db-in-django.assets/image-20211020223846812.png)
 
   - articles_comment (앱이름_클래스명 형태)
 
@@ -96,7 +96,7 @@
 
     `comment.article.content` -> 댓글이 참조하는 article 객체의 필드 중에 content 가져옴
 
-  - ![image-20211018115208347](1018-db-in-django.assets/image-20211018115208347.png)
+  - ![image-20211018115208347](211018-db-in-django.assets/image-20211018115208347.png)
 
     => 1번 게시글을 참조하는 2개의 댓글(1:N)
 
@@ -322,7 +322,7 @@
 
 ### Custom user & Built-in auth forms
 
-![image-20211018153217104](1018-db-in-django.assets/image-20211018153217104.png)
+![image-20211018153217104](211018-db-in-django.assets/image-20211018153217104.png)
 
 - 유저 커스텀 하고 회원가입 하려고 하면 이렇게 뜸
 
@@ -385,7 +385,7 @@
 
 - 하지만 이렇게 하면 comment.user 정보가 없어서 IntegretyError 발생
 
-  ![image-20211018172852708](1018-db-in-django.assets/image-20211018172852708.png)
+  ![image-20211018172852708](211018-db-in-django.assets/image-20211018172852708.png)
 
 - create 함수 수정
 
