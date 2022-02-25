@@ -1,16 +1,16 @@
 ### 목차
 
 - [05_data structure: str, list](#05_data-structure-str-list)
-  * [데이터 구조(Data structure)](#-data-structure)
-  * [문자열 메서드 `.strip()` & `.split()`](#--strip--split)
+  * [데이터 구조(Data structure)](#데이터-구조data-structure)
+  * [문자열 메서드 `.strip()` & `.split()`](#문자열-메서드-strip--split)
   * ['seperator'.join(iterable)](#seperatorjoiniterable)
-  * [문자열 검증 메소드](#--)
-  * [List의 메서드](#list-)
+  * [문자열 검증 메소드](#문자열-검증-메소드)
+  * [List의 메서드](#list의-메소드)
   * [mutable vs immutable](#mutable-vs-immutable)
   * [List comprehension](#list-comprehension)
   * [`map(function, iterable)`](#mapfunction-iterable)
 - [05_data structure: set, dictionary](#05_data-structure-set-dictionary)
-  * [set: 추가 및 삭제](#set---)
+  * [set: 추가 및 삭제](#set-추가-및-삭제)
   * [Dictionary comprehension](#dictionary-comprehension)
 
 <br>

@@ -2,11 +2,11 @@
 
 - [Django](#django)
   * [Web framework](#web-framework)
-  * [장고 설치](#-)
+  * [장고 설치](#장고-설치)
     + [1](#1)
     + [2](#2)
   * [Django Template](#django-template)
-  * [템플릿 상속](#--1)
+  * [템플릿 상속](#템플릿-상속)
   * [HTML Form](#html-form)
   * [URL](#url)
   * [Namespace](#namespace)
