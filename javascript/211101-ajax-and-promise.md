@@ -3,21 +3,21 @@
 - [JavaScript 02](#javascript-02)
   * [AJAX](#ajax)
     + [AJAX](#ajax-1)
-    + [XMLHttpRequest 객체](#xmlhttprequest-)
+    + [XMLHttpRequest 객체](#xmlhttprequest-객체)
   * [Asynchronous JavaScript](#asynchronous-javascript)
     + [Concurrency model](#concurrency-model)
     + [Zero delays](#zero-delays)
-    + [순차적인 비동기 처리](#--)
+    + [순차적인 비동기 처리](#순차적인-비동기-처리)
   * [Callback Function](#callback-function)
     + [Callback function](#callback-function-1)
-    + [JavaScript의 함수는 "일급 객체"](#javascript---)
-    + [Async callbacks (비동기 콜백)](#async-callbacks--)
+    + [JavaScript의 함수는 "일급 객체"](#javascript의-함수는-일급-객체)
+    + [Async callbacks (비동기 콜백)](#async-callbacks-비동기-콜백)
     + [Callback Hell](#callback-hell)
   * [Promise](#promise)
     + [Promise object](#promise-object)
-    + [Async callback 작성 스타일과 달리 Promise가 보장하는 특징](#async-callback----promise--)
+    + [Async callback 작성 스타일과 달리 Promise가 보장하는 특징](#async-callback-작성-스타일과-달리-promise가-보장하는-특징)
   * [Axios](#axios)
-  * [async & await => 더 알아보기!](#async--await---)
+  * [async & await => 더 알아보기](#async--await--더-알아보기)
 
 <br>
 
@@ -210,7 +210,7 @@
 
 <br>
 
-## async & await => 더 알아보기!
+## async & await => 더 알아보기
 
 - 비동기 코드를 작성하는 새로운 방법
 
