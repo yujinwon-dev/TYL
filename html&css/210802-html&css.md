@@ -227,17 +227,29 @@
 
 - Box model
 
-  - 모든 html 요소는 box 형태로 되어 있음
+  - 모든 html 요소는 box 형태로 되어 있음 -> display 속성을 가짐
 
   - 하나의 박스는 네 부분으로 구성
 
     : content, padding, border, margin
+  
+  - Content
+    - 가로는 width, 세로는 height
+  - Padding
+    - 안쪽 여백. content와 border 사이의 공간을 나타냄
+  - Border
+    - 테두리
+  - Margin
+    - 바깥쪽 여백
 
 
 
 - margin/padding/border shorthand
 
+  - shorthand : 상 우 좌 하 시계방향
+  
   ```css
+  /* margin shorthand */
   .margin-2 {
       /* 상하 좌우 */
       margin: 10px 20px;
@@ -252,7 +264,15 @@
       border-style: dashed;
       border-color: black;
   }
+  
+  /* border shorthand */
   .border {
+      border-top-left-radius: 10px;
+      border-bottom-right-radius: 10px;
+  }
+  
+  .border {
+      /* 굵기 스타일 색상 */
       border: 2px solid black;
   }
   
@@ -267,12 +287,13 @@
 
 
 
-- box size
+- Box sizing
 
   ```css
   .box {
-        /* 너비100 + 마진 20 + 보더2 = 142px*/
+        /* 컨텐트 너비 100 + 마진 20 * 2 + 보더 2 = 총 너비 142px*/
         /* width를 100으로 설정했더라도! */
+        /* 기본 box-sizing이 content-box이기 때문 */
         width: 100px;
         margin: 10px auto;
         padding: 20px;
@@ -283,11 +304,16 @@
       }
   
   .box-sizing {
-        /* 이렇게 box-sizing을 content-box(기본값)에서 border-box로 변경 */
+        /* 이렇게 box-sizing을 border-box로 변경 */
         /* => border까지 합해서 width 설정 */
         box-sizing: border-box;
         margin-top: 50px;
       }
+  
+  /* 그래서 그냥 모든 요소에 border-box 기준으로 사이즈 잡게 설정하기도 함 */
+  * {
+      box-sizing: border-box;
+  }
   ```
 
 
@@ -302,19 +328,22 @@
 
 - display
 
-  - `display: block` : 화면 크기 전체의 가로폭 차지(줄 바꿈 O). 안에 인라인 레벨 요소 들어갈 수 있음
-
+  - `display: block` 
+    - 화면 크기 전체의 가로폭 차지(줄 바꿈 O). 안에 인라인 레벨 요소 들어갈 수 있음
+    - 따로 width를 준 경우 남은 공간은 알아서 margin으로 채움
+    - 따로 height을 주지 않은 경우 자식 요소들의 height의 합이 height가 됨
+    - width, height, padding, border, margin 모두 가능
     - 정렬방법: `text-align: left;`, `text-align: right;`, `text-align: center;`
-
-  - `display: inline`: content 너비만큼만 가로폭 차지(줄 바꿈 X). **width/height/margin-top/margin-bottom 설정 불가**
-
+  - `display: inline`
+    - content 너비만큼만 가로폭 차지(줄 바꿈 X)
+    - 공간이 모자르면 알아서 줄바꿈
+    - **width, height, padding/border/margin -top/-bottom 설정 불가** -> 인라인의 흐름을 박살내기 때문! left right은 인라인에서 좌우 간격만 띄워주므로 흐름에 방해가 되지 않음.
     - 정렬방법: `margin-right: auto;`, `margin-left: auto;`, `margin-right: auto; margin-left: auto;`
-
-  - `display: inline-block`: inline처럼 한 줄에 표시 가능, block처럼 width, height, margin 지정 가능
-
+  - `display: inline-block`
+    - inline처럼 한 줄에 표시 가능 & block처럼 width, height, margin 지정 가능
   - `display: none`: 화면에 표시 X(공간 차지도 안 함)
-
-    +) `visibility: hidden`: 공간 차지 하지만 화면에만 안 보임
+  
+    - +) `visibility: hidden`: 공간 차지 하지만 화면에만 안 보임
 
 
 
