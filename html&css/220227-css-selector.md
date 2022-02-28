@@ -1,4 +1,25 @@
-[toc]
+### 목차
+
+- [CSS selector](#css-selector)
+  * [요소, 클래스, ID 선택자](#요소-클래스-id-선택자)
+    + [요소 선택자 type selector](#요소-선택자-type-selector)
+    + [클래스 선택자 class selector](#클래스-선택자-class-selector)
+    + [ID 선택자 ID selector](#id-선택자-id-selector)
+  * [자식, 자손, 형제 선택자](#자식-자손-형제-선택자)
+    + [자식 선택자 child combinator](#자식-선택자-child-combinator)
+    + [자손 선택자 descendant combinator](#자손-선택자-descendant-combinator)
+    + [형제 선택자 sibling combinators](#형제-선택자-sibling-combinators)
+  * [구조적 가상 클래스 선택자 Structural Pseudo-classes](#구조적-가상-클래스-선택자-structural-pseudo-classes)
+    + [element:first-child](#elementfirst-child)
+    + [element:last-child](#elementlast-child)
+    + [element:nth-child(n)](#elementnth-childn)
+  * [동적 가상 클래스 선택자 User Action Pseudo-classes](#동적-가상-클래스-선택자-user-action-pseudo-classes)
+    + [element:hover](#elementhover)
+    + [element:focus](#elementfocus)
+    + [element:active](#elementactive)
+  * [CSS 선택자 우선순위](#css-선택자-우선순위)
+
+<br>
 
 # CSS selector
 
@@ -48,3 +69,141 @@
 
 <br>
 
+## 자식, 자손, 형제 선택자
+
+### 자식 선택자 child combinator
+
+- 자식: **한 단계** 바로 내부에 있는 태그
+
+- `parent > child`
+
+- 예시
+
+  ```css
+  section > h1 {
+      color: #ff4949;
+  }
+  ```
+
+### 자손 선택자 descendant combinator
+
+- 자손: **모든** 내부에 있는 태그
+
+- `parent descendants`
+
+- 예시
+
+  ```css
+  section h1 {
+      color: #0066ff;
+  }
+  ```
+
+### 형제 선택자 sibling combinators
+
+- 형제: 같은 레벨에 있는 태그
+- `parent + sibling` : 현제 요소의 **바로 다음에 오는 하나**의 형제
+- `parent ~ sibling` : 현재 요소의 **다음에 오는** 형제들 중에 sibling에 해당하는 형제
+
+<br>
+
+## 구조적 가상 클래스 선택자 Structural Pseudo-classes
+
+- 가상 클래스 선택자: 어떤 상태나 조건을 만족했을 때 사용할 수 있는 선택자
+
+### element:first-child
+
+- 예시
+
+  ```css
+  /* 콜론 앞뒤로 띄어쓰기 X */
+  li:first-child {
+      color: #0066ff;
+  }
+  ```
+
+### element:last-child
+
+- 예시
+
+  ```css
+  li:last-child {
+      color: #ffc82c;
+  }
+  ```
+
+### element:nth-child(n)
+
+- 예시
+
+  ```css
+  li:nth-child(3) {
+      color: #ff4949;
+  }
+  ```
+
+- 짝수 표현 시
+
+  ```css
+  li:nth-child(2n) {
+      color: #ffc82c;
+  }
+  ```
+
+<br>
+
+## 동적 가상 클래스 선택자 User Action Pseudo-classes
+
+### element:hover
+
+- 어떤 요소에 마우스를 올렸을 때
+
+- 예시
+
+  ```css
+  a:hover {
+      color: #7e5bef
+  }
+  ```
+
+### element:focus
+
+- 어떤 요소에 focus 되었을 때
+- active 상태도 focus 상태의 일부이므로 `focus`-`active` 순서로 작성해야 두 스타일이 다 적용됨!
+
+- 예시
+
+  ```css
+  input:focus {
+      border-color: #1fb6ff;
+  }
+  ```
+
+### element:active
+
+- 어떤 요소를 누르는 찰나의 순간 ex) 클릭 중일 때
+
+- 예시
+
+  ```css
+  a:active {
+      color: #592dea
+  }
+  ```
+
+<br>
+
+## CSS 선택자 우선순위
+
+- 점수의 총합에 따라 점수가 높은 순으로 적용
+
+  1. ID 선택자
+
+  2. 클래스 및 가상 클래스 선택자
+
+  3. 요소 선택자
+
+- Rule Breakers
+
+  - Inline style
+  - `!important`
