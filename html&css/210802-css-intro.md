@@ -290,6 +290,10 @@
 
 - +) z-index: position된 요소들의 수직 레벨을 알려주는 property
 
+- +) absolute, fixed 가운데 배치 할 경우 top, left에 추가적으로 `transform: translate(-50%, -50%);`
+
+  왼쪽 모서리 위치를 기준으로 가운데 정렬되므로 -50%씩 옮겨줌
+
 ### +) Emmet
 
 - HTML&CSS 작성 시 보다 빠른 마크업을 위해 사용되는 오픈 소스
