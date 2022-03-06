@@ -81,17 +81,15 @@ css가 원래는 html에서 사진을 어떻게 배치할 것인가에 관한 �
     - 메인축: 왼->오
     - 교차축: 위->아래
   - 요소
-    - flex container: 부모. 여기에 `display: flex` 작성 -> 부모요소 컨트롤하는 것으로 요소 레이아웃 지정(inline-flex는 많이는 안 씀)
+    - flex container: 부모. 여기에 `display: flex | inline-flex` 작성 -> 부모요소 컨트롤하는 것으로 요소 레이아웃 지정(inline-flex는 많이는 안 씀)
     - flex item: 실제 정렬되는 대상
-
-
 
 - display: flex 밑에 작성
 
   - 배치 방향 설정
     - `flex-direction`: 메인축의 방향(item이 쌓이는 방향)을 변경
 
-      => `row`(좌->우), `row-reverse`(우->좌), `column`,(위->아래) `column-reverse`(아래->위)
+      => `row`(좌->우, **기본값**), `row-reverse`(우->좌), `column`,(위->아래) `column-reverse`(아래->위)
 
     
 
@@ -109,27 +107,29 @@ css가 원래는 html에서 사진을 어떻게 배치할 것인가에 관한 �
 
 
 - justify-content & align-content
-  - `flex-start`: 시작지점부터 차례로(기본 값)
+  - `flex-start`: 시작지점부터 차례로(**기본 값**)
   - `flex-end`: 순서 역순X, 그냥 뒤로 밀어서 배치
   - `center`: 정중앙
   - `space-between`: 좌우정렬(item들 간 간격 동일)
   - `space-around`: 균등 좌우 정렬(내부 요소 여백=외곽 여백 * 2) (요소들이 모두 같은 양쪽 여백 가짐)
   - `space-evenly` : 균등 정렬(내부 요소 여백=외곽 여백)
+  - align-content가 의미 있으려면 flex-wrap이 wrap이어야 함
+    - align-items의 경우: wrap이어서 여러 줄이 생기면 한 줄마다 축이 생김
+    - align-content의 경우: 전체의 축 하나를 기준으로 정렬 -> 한 줄에 여러 개의 아이템이 있을 수 있으므로 space-between|around|evenly도 가능
 - align-items & align-self
-  - `flex-start`
+  - `flex-start`(**기본 값**)
   - `flex-end`
   - `center`
   - `baseline` : item 내부의 text 기준선에 맞춤
   - `stretch`: 컨테이너 가득 채움(align-items 기본값)
   - `auto`: align-self에서만 가능! (align-self 기본값)
-
 - `justify content: center;` `align-items:center;` 하면 상하좌우 정중앙에 배치
 
 
 
 - `flex-wrap: wrap` : 강제 한 줄 배치 X. 다음 줄로 넘김
 
-- `flex-wrap: nowrap`: 강제 한 줄 배치(기본값). 넷플릭스 영화 넘기는 부분처럼! 화면에 보이는 부분 따로, 관리하는 부분 따로. hidden 설정을 하면 나머지는 안 보이게. 화면에 보이는 부분은 고정이고 관리하는 부분을 움직이게 해서 버튼으로 넘기는 것! => `carousel`
+- `flex-wrap: nowrap`: 자식 사이즈를 줄여서라도 강제 한 줄 배치(**기본값**). 넷플릭스 영화 넘기는 부분처럼! 화면에 보이는 부분 따로, 관리하는 부분 따로. hidden 설정을 하면 나머지는 안 보이게. 화면에 보이는 부분은 고정이고 관리하는 부분을 움직이게 해서 버튼으로 넘기는 것! => `carousel`
 
   => vanilla js carousel / slider 검색하면 많이 나옴! 
 
@@ -143,7 +143,7 @@ css가 원래는 html에서 사진을 어떻게 배치할 것인가에 관한 �
 
   ex) `flex-flow: row wrap;`
 
-- `order`: 기본값 0, 작은 숫자일수록 우선 쌓이는 방향으로 이동
+- `order`: 각 아이템의 순서를 바꿔줄 수 있음. 기본값 0, 작은 숫자일수록 우선 쌓이는 방향으로 이동
 
 - `flex-grow`: 남는 공간을 항목들에 분배하는 방법(기본값 0, 음수 불가)
 
