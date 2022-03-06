@@ -202,3 +202,57 @@
 
   - 리액트 엘리먼트를 반환하는 함수
   - PascalCase 사용
+
+### 리스트
+
+- JavaScript`map()`을 통해 리스트의 각 요소를 엘리먼트로 처리할 수 있음
+
+  ```react
+  function Favorites() {
+      const CAT1 = "https://cataas.com/cat/60b73094e04e18001194a309/says/react";
+      const CAT2 = "https://cataas.com//cat/5e9970351b7a400011744233/says/inflearn";
+      const CAT3 = "https://cataas.com/cat/595f280b557291a9750ebf65/says/JavaScript";
+  
+      const cats = [CAT1, CAT2];
+  
+      return (
+          <ul className="favorites">
+              {cats.map((cat) => (
+                  <CatItem img={cat} key={cat} />
+              ))}
+          </ul>
+      );
+  }
+  ```
+
+- 리스트 사용 시 `key` 명시하지 않으면 아래와 같은 에러 발생
+
+  `Warning: Each child in a list should have a unique "key" prop.`
+
+### 폼 다루기
+
+- 인풋 값이 변경될 때마다 함수를 부르라는 뜻의 내장 api: `onChange`
+
+  ```react
+  <input
+      type="text"
+      name="name"
+      value={value}
+      placeholder="영어 대사를 입력해주세요"
+      onChange={handleInputChange}
+      />
+  ```
+
+### 로컬스토리지에 데이터 싱크하기
+
+- 로컬스토리지에는 데이터가 String으로 저장되므로 숫자가 필요하면 Number로 변환 혹은 파싱
+
+  ```react
+  const [counter, setCounter] = React.useState(Number(localStorage.getItem("counter")));
+  // OR
+  getItem: (key) => {
+      return JSON.parse(localStorage.getItem(key));
+  },
+  ```
+
+  
