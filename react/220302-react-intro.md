@@ -43,13 +43,20 @@
 ### Babel
 
 - The compiler for next generation Javascript
-  - 새로운 js 문법을 위해 브라우저가 이해할 수 있는 js로 바꿔주는 통역사
-
+  - 새로운 js 문법을 브라우저가 이해할 수 있는 js로 바꿔주는 통역사
+  - 브라우저는 JSX를 이해하지 못하므로 Babel을 통해 JSX -> JavaScript
+  
 - 브라우저는 `<head>` 내의 `<script>`를 읽어서 react를 그릴 수 있게 된 것!
 
   ![image-20220202230005135](220302-react-intro.assets/image-20220202230005135.png)
 
 ### JSX로 HTML과 JavaScript 짬뽕하기
+
+- JSX
+  - JavaScript + XML
+    - XML: 다른 특수한 목적을 갖는 마크업 언어를 만드는데 사용하도록 권장하는 다목적 마크업 언어
+  - JavaScript에 HTML 태그를 끼얹은 문법
+  - HTML 태그 안에서 중괄호를 이용해 JS 사용 가능
 
 - 리액트에서 js 문법 사용하기
 
@@ -88,6 +95,10 @@
 
 ### 스타일링
 
+- 스타일링 방법
+  - CSS 클래스: className
+  - 인라인 스타일링: style={{ 스타일속성: '스타일값' }}
+
 - 리액트에서 html 프로퍼티가 다른 경우가 왕왕 있음
 
   - `class` => `className`
@@ -114,6 +125,8 @@
 
 ### 이벤트 다루기
 
+- 일반 자바스크립트 이벤트 목록과 동일 but camelCase로 작성
+
 - 예시
 
   ```react
@@ -136,16 +149,18 @@
   }
   ```
 
-
 ### useState
+
+- useState 함수로 상태를 추가할 수 있음
+  - `const [상태명, 상태변경함수명] = React.useState(초기값)`
 
 - useState() 호출 시 배열이 반환되고, 이 배열은 2개의 원소를 가짐
 
   ```react
-  const [state, setState] = useState(initialState);
-  // state: 현재 상태
+  const [state, setState] = React.useState(initialState);
+  // state: 상태 이름
   // setState: 상태값 설정 함수
-  // 이름은 자유롭게 설정 가능
+  // state, setState 이름은 자유롭게 설정 가능
   ```
 
 - 상태를 설정하려면 엘리먼트가 아닌 컴포넌트여야 함
@@ -188,7 +203,7 @@
   ```react
   // 컴포넌트
   function Welcome(props) {
-    // props: 컴포넌트의 입력값
+    // props: properties. 컴포넌트의 입력값
     return <h1>Hello, {props.name}</h1>;
   }
   
@@ -200,6 +215,7 @@
   }
   ```
 
+  - 재사용 가능한 UI 코드 조각
   - 리액트 엘리먼트를 반환하는 함수
   - PascalCase 사용
 
@@ -245,6 +261,15 @@
 
 ### 로컬스토리지에 데이터 싱크하기
 
+- 간단한 저장이 필요할 때 사용 가능 (7일까지 저장 가능)
+
+  ```javascript
+  localStorage.setItem("name", "유진");
+  localStorage.getItem("name");	// 유진
+  ```
+
+  
+
 - 로컬스토리지에는 데이터가 String으로 저장되므로 숫자가 필요하면 Number로 변환 혹은 파싱
 
   ```react
@@ -255,4 +280,9 @@
   },
   ```
 
-  
+
+## 지금까지 만든 앱 배포하기
+
+- githup pages
+  - 해당 레파지토리 > Settings > Pages
+  - Source none->master로 변경
