@@ -66,3 +66,4 @@
     - `"homepage": "https://yujinwon-dev.github.io/react-cat-jjal-maker",`
   - `npm run build`
   - `npm run deploy`: 방금 build한 build 폴더가 github pages로 올라가게 됨
+
