@@ -147,3 +147,71 @@
   - italic: 이탈릭체
   - oblique
     - 잘 사용하진 않음
+
+## web font
+
+- 사용방법
+
+  1. 갖다 쓴다
+
+     ```html
+     <!-- index.html -->
+     <head>
+       ...
+       <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+     </head>
+     ```
+
+     ```css
+     /* style.css */
+     body {
+       font-family: "Montserrat", sans-serif;
+     }
+     ```
+
+  2. 직접 제공한다
+
+     1) 폰트 파일을 프로젝트 폴더에 저장
+
+        ex) pjt/assets/fonts/NanumSquareRoundR.ttf
+
+     2) 폰트 정의
+
+        ```css
+        /* fonts.css */
+        @font-face {
+          /* 사용할 웹폰트 스펙 설정 */
+          font-family: "YJ"; /* 서체명(정하기 나름) */
+          font-style: normal;
+          font-weight: 300;
+          /* 각 브라우저마다 지원하는 확장자가 다름 */
+          src: url('./assets/fonts/NanumSquareRoundL.eot'); /* IE9 Compat Modes */
+          src: url('./assets/fonts/NanumSquareRoundL.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+               url('./assets/fonts/NanumSquareRoundL.woff2') format('woff2'), /* Super Modern Browsers */
+               url('./assets/fonts/NanumSquareRoundL.woff') format('woff'), /* Pretty Modern Browsers */
+               url('./assets/fonts/NanumSquareRoundL')  format('truetype'); /* Safari, Android, iOS */
+        }
+        ```
+
+     3) 폰트 불러오기
+
+        ```html
+        <!-- index.html -->
+        <head>
+          ...
+          <link rel="stylesheet" href="./fonts.css">
+        </head>
+        ```
+
+     4) 폰트 적용
+
+        ```css
+        /* style.css */
+        @import url('./fonts.css');
+        
+        body {
+          font-family: "YJ", sans-serif;
+        }
+        ```
+
+        
