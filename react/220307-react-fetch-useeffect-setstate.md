@@ -61,7 +61,7 @@
   React.useEffect(() => {
     console.log("hello");
   })
-  // 처음에 앱이 생성되었을 때만 호출
+  // 처음에 앱이 생성되었을 때만(=마운트 되었을 때 한 번만) 호출
   React.useEffect(() => {
     console.log("hello");
   }, [])
