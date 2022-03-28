@@ -59,7 +59,6 @@
 ### 지금까지 만든 앱 create-react-app으로 옮기기
 
 - 지금 cra에 있는 react 코드를 js 코드로 변환하는 빌드 과정이 필요
-  - `npm run build`
   - `npm i gh-pages`
   - package.json
     - `"scripts": { ..., deploy": "gh-pages -d build"}`
@@ -67,3 +66,26 @@
   - `npm run build`
   - `npm run deploy`: 방금 build한 build 폴더가 github pages로 올라가게 됨
 
+### +) netlify 배포
+
+- 빌드
+
+  ```bash
+  npm run build
+  ```
+
+- netlify-cli 설치
+
+  ```bash
+  npm install netlify-cli -g
+  ```
+
+- netlify 배포
+
+  ```bash
+  netlify deploy
+  ```
+
+  - publish directory: `build` 입력
+
+- 참고: [cra Deployment Netlify](https://create-react-app.dev/docs/deployment#netlify)
