@@ -31,8 +31,23 @@
 
     - 현재 폰트 사이즈에 대해 적용하는 게 편하기 때문
 
-    - 예시
+      - `%` 단위를 사용해서 line-height 값이 자식 요소로 상속되었을 경우, 이미 부모 요소에서 계산된 값이 상속됨 -> 가능하면 단위가 없는 값 사용
 
+        ```css
+        body {
+            font-size: 20px;
+            line-height: 200%;	/* line-height = 40px */
+        }
+        
+        p {
+            font-size: 10px;	/* line-height = 40px */
+        }
+        ```
+  
+        
+  
+    - 예시
+  
       ```css
       .text {
         /* font-size에 비례해서 em 단위로 설정할 경우 단위는 안 적는 게 관례 */
@@ -40,7 +55,7 @@
         line-height: 1.5;
       }
       ```
-
+  
   - rem
 
 ## letter-spacing
