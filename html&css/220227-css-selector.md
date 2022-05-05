@@ -69,6 +69,49 @@
 
 <br>
 
+## 속성 선택자 attribute selector
+
+- 대괄호를 이용해서 선언하며, 대괄호 안에 속성 이름이 들어감
+
+  ```css
+  /* p 태그이면서 class 속성이 있다면 */
+  p[class] {
+  	color: silver;
+  }
+  
+  /* p 태그이면서 class, id 속성이 있다면 */
+  p[class][id] {
+  	color: silver;
+  }
+  
+  /* p 태그이면서 class 속성 값이 foo라면 */
+  p[class="foo"] {
+  	color: silver;
+  }
+  
+  /* p 태그이면서 class 속성 값에 공백으로 구분한 "color" 단어가 포함된다면 */
+  p[class~="color"] {
+  font-style: italic;
+  }
+  
+  /* p 태그이면서 class 속성 값이 "color"로 시작한다면 */
+  p[class^="color"] {
+  		font-style: italic;
+  }
+  
+  /* p 태그이면서 class 속성 값이 "color"로 끝난다면 */
+  p[class$="color"] {
+  	font-style: italic;
+  }
+  
+  /* p 태그이면서 class 속성 값에 "color"가 포함된다면 (클래스가 "colorful" 이어도 해당) */
+  p[class*="color"] {
+  	font-style: italic;
+  }
+  ```
+
+<br>
+
 ## 자식, 자손, 형제 선택자
 
 ### 자식 선택자 child combinator
@@ -168,7 +211,7 @@
 
 ### element:focus
 
-- 어떤 요소에 focus 되었을 때
+- 어떤 요소에 focus 되었을 때 (현재 입력 초점을 가진 요소에 적용)
 - active 상태도 focus 상태의 일부이므로 `focus`-`active` 순서로 작성해야 두 스타일이 다 적용됨!
 
 - 예시
@@ -181,7 +224,7 @@
 
 ### element:active
 
-- 어떤 요소를 누르는 찰나의 순간 ex) 클릭 중일 때
+- 어떤 요소를 누르는 찰나의 순간 ex) 버튼을 눌렀을 때처럼 순간적으로 활성화
 
 - 예시
 
