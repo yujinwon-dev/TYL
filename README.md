@@ -61,7 +61,7 @@ Today Yujin Learned
 - [JavaScript intro](https://github.com/yujinwon-dev/TYL/blob/main/javascript/211027-js-intro.md)
 - [Ajax & Promise](https://github.com/yujinwon-dev/TYL/blob/main/javascript/211101-ajax-and-promise.md)
 - [JSON methods](https://github.com/yujinwon-dev/TYL/blob/main/javascript/220316-javascript-json-methods.md)
-- [DOM 조작하기](https://github.com/yujinwon-dev/TYL/blob/main/javascript/220405-js-methods.md)
+- [DOM 조작하기](https://github.com/yujinwon-dev/TYL/blob/main/javascript/220405-dom-manipulation.md)
 - [var, let, const](https://github.com/yujinwon-dev/TYL/blob/main/javascript/220501-var-let-const.md)
 - [sync & async](https://github.com/yujinwon-dev/TYL/blob/main/javascript/220502-sync-async.md)
 - [중첩 함수](https://github.com/yujinwon-dev/TYL/blob/main/javascript/220605-nested-function.md)
