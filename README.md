@@ -69,6 +69,7 @@ Today Yujin Learned
 - [Web API](https://github.com/yujinwon-dev/TYL/blob/main/javascript/220923-web-api.md)
 - [Closure](https://github.com/yujinwon-dev/TYL/blob/main/javascript/221003-closure.md)
 - [Hoisting](https://github.com/yujinwon-dev/TYL/blob/main/javascript/221004-hoisting.md)
+- [Prototype](https://github.com/yujinwon-dev/TYL/blob/main/javascript/230219-prototype.md)
 ### Markdown
 - [체크박스 만들기](https://github.com/yujinwon-dev/TYL/blob/main/markdown/220720-checkbox.md)
 ### React
